@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        body {
+            background-color: grey;
+            color: white;
+        }
+        h1 {
+            color: black;
+            text-align: center;
+        }
+        fieldset {
+            background-color: black;
+            height: 220px;
+        }
+        legend {
+            background-color: black;
+            color: grey;
+        }
+        #submitButton {
+            width: 100px;
+            height: 40px;
+            background-color: cyan;
+        }
+        #submitButton:hover {
+            width: 120px;
+            height: 50px;
+            background-color: black;
+            color: cyan;
+        }
+    </style>
+</head>
+<body>
+    <h1> User Login Form</h1>
+    <hr>
+    <fieldset>
+        <legend>Enter Details</legend>
+        <br><br><br>
+        <label>User Name: </label>
+        <input type="text">
+        <br><br><br>
+        <label>Password: </label>
+        <input id="password" type="text">
+        <i class="fa-solid fa-eye" onclick="visibility('original')"></i>
+        <br><br><br>
+        <label>Confirm Password: </label>
+        <input id="rePassword" type="text">
+        <i class="fa-solid fa-eye" onclick="visibility('confirm')"></i>
+        <br><br><br>
+        <input id="submitButton" type="submit">
+    </fieldset>
+
+    <script>
+        function visibility(element) {
+
+            if (element === 'original') {
+                var password = document.getElementById("password");
+                console.log(password);
+                if (password.type === "text") {
+                    password.type = "password"
+                } else {
+                    password.type = "text"
+                }
+            } else {
+                var rePassword = document.getElementById("rePassword");
+                if (rePassword.type === "text") {
+                    rePassword.type = "password"
+                } else {
+                    rePassword.type = "text"
+                }
+            }
+            
+            
+
+
+        }
+    </script>
+</body>
+</html>
